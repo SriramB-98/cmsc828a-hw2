@@ -18,7 +18,7 @@ def get_fedavg_argparser() -> ArgumentParser:
         default="cifar10",
     )
     parser.add_argument("-p", "--partition", type=str)
-    parser.add_argument("--prefix", type=str)
+    parser.add_argument("--prefix", type=str, default="")
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("-jr", "--join_ratio", type=float, default=0.1)
     parser.add_argument("-ge", "--global_epoch", type=int, default=100)

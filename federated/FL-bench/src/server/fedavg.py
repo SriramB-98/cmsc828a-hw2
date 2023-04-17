@@ -358,7 +358,7 @@ class FedAvgServer:
                     accuracies.append(np.array(acc).T)
                     labels.append(label)
             pd.DataFrame(np.stack(accuracies, axis=1), columns=labels).to_csv(
-                OUT_DIR / self.algo / self.prefix / "{self.args.dataset}_{self.args.partition}_jr-{self.args.join_ratio}_acc_metrics.csv",
+                OUT_DIR / self.algo / self.prefix / f"{self.args.dataset}_{self.args.partition}_jr-{self.args.join_ratio}_acc_metrics.csv",
                 index=False,
             )
         # save trained model(s)
